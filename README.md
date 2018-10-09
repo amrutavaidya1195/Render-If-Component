@@ -10,6 +10,7 @@ This is a JS library for rendering the DOM elements on client side
 ## Using Renderif with different components ##
 * Input Text/ Textarea : To use render-if with simple input types just provide the selector inside val function and provide the expression in the render-if attribute.
   * Example - 
+  
   `<input id="testInput" class="demoNumberInput" type="text" value="">
   <input id="inputCheckbox" type="checkbox" render-if='val("#testInput") == "test value"' onchange="testChangeFunction();">`
   The above checkbox will only render if the value in the input text is 'test value'
@@ -44,7 +45,8 @@ This is a JS library for rendering the DOM elements on client side
   * Mathematical Operators : Render-if supports mathematical operators to be used in the render-if expression. Operators supported are :     
     `/, *, %, ==, !=, >=, <=, >, <, +, -.` 
     * Example - 
-      `<output form="rendererForm" name="DemoOutput" for="testNumberInput">Enter State : </output>
+      
+	`<output form="rendererForm" name="DemoOutput" for="testNumberInput">Enter State : </output>
        <input id="testNumberInput" class="demoNumberInput" type="text" value="10">
        <input id="inputCheckbox" class="demoInputCheckbox" type="checkbox" render-if='val("#testNumberInput") %2 == 0'>`
       
