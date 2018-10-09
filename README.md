@@ -6,8 +6,8 @@ This is a JS library for rendering the DOM elements on client side
 ### Options ###
   //Clear the data from the elements on hide
   
-	`$("[render-if]").RenderIf({ 
-				clearOnHide: false, });` 
+	$("[render-if]").RenderIf({ 
+				clearOnHide: false, }); 
 ## Using Renderif with different components ##
 * Input Text/ Textarea : To use render-if with simple input types just provide the selector inside val function and provide the expression in the render-if attribute.
   * Example - 
@@ -24,7 +24,7 @@ This is a JS library for rendering the DOM elements on client side
   * Example - 
     * a) render-if='inVal("#multiSelectInput","other") == true' // For single  value comparison
     * b) render-if='val("#multiSelectInput") == "singing;other"' // For multiple value comparison
-## Render If with Apex Elements ##
+## Render If with Visualforce Elements(Salesforce) ##
   * Only class selector has to be used while using render-if attribute with apex elements. 
   * Render-if attribute can only be used with only those apex elements which supports HTML Pass-through attributes.
   * Code snippet for using render-if with an apex input text - 
