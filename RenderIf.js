@@ -4,8 +4,8 @@ var parser;
 $ = jQuery.noConflict();
 $( document ).ready(function() {
 // Get all the visibly elements
-var getVisibly = $("[visibly]").toArray();
-visiblyElementsArray.push($("[visibly]"));
+var getVisibly = $("[render-if]").toArray();
+visiblyElementsArray.push($("[render-if]"));
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 var Parser = require('expr-eval').Parser;
@@ -20,12 +20,12 @@ parser.functions.val = function (selector) {
 	if (selectedElem.is('select')) {
 		returnValue = $(selector).find("option:selected").text();
 		if($(selector).find("option:selected").length > 1 ) {
-			 var countries = [];
+			 var selectedPicklistVal = [];
 			$.each($(selector).find("option:selected"), function(){            
-				countries.push($(this).val());
+				selectedPicklistVal.push($(this).val());
 			});
-			countries.join(";");
-			returnValue = countries.join(";");
+			selectedPicklistVal.join(";");
+			returnValue = selectedPicklistVal.join(";");
 		} 
 	}
 	
@@ -1608,7 +1608,7 @@ parser.functions.inVal = function(selectorValue, checkValue) {
 		for(var visi=0; visi < getVisibly.length; visi++) {
 			  var element = getVisibly[visi];
 			  // Fetch the visibly expression for the element
-			  var getVisiblyExpr = $(element).attr("visibly");
+			  var getVisiblyExpr = $(element).attr("render-if");
 			  var expr = parser.parse(getVisiblyExpr);
 			  var isRendered = expr.evaluate();
 			  if(isRendered == true) {
@@ -1630,7 +1630,7 @@ parser.functions.inVal = function(selectorValue, checkValue) {
 			var exprMapArray = [];
 			var selector;
 			for(var i=0; i < getVisibly.length; i++) {
-				var visiblyExpr = $(getVisibly[i]).attr("visibly");
+				var visiblyExpr = $(getVisibly[i]).attr("render-if");
 				var finalSelectorArray = [];
 				for(var j=0; j < uniqueselectorArray.length; j++) {
 					if(visiblyExpr.indexOf(uniqueselectorArray[j]) > -1 && $(uniqueselectorArray[j]).length > 0 && !($(uniqueselectorArray[j]).is(':radio'))) {
@@ -1679,7 +1679,7 @@ parser.functions.inVal = function(selectorValue, checkValue) {
 										
 										// Iterate over getVisibly array in order to fetch all those elements which has expr for radio btn
 										for(var iterator=0 ; iterator < getVisibly.length; iterator++) {
-											var getCurrentExpr = $(getVisibly[iterator]).attr('visibly');
+											var getCurrentExpr = $(getVisibly[iterator]).attr('render-if');
 											
 											if(getCurrentExpr.indexOf(className) > -1) {
 												
