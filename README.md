@@ -2,7 +2,7 @@
 This is a JS library for rendering the DOM elements on client side
 # Documentation
 ### Setup ###
-$("[visibly]").RenderIf();
+`$("[visibly]").RenderIf();`
 ### Options ###
   `clearOnHide: false  //Clear the data from the elements on hide`
 ## Using Renderif with different components ##
