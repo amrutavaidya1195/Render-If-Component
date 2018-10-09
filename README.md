@@ -28,7 +28,7 @@ This is a JS library for rendering the DOM elements on client side
   * Render-if attribute can only be used with only those apex elements which supports HTML Pass-through attributes.
   * Code snippet for using render-if with an apex input text - 
    `<apex:inputText id="inputDetails" styleClass="inputStyle" value="{!strInputDetails}" html-render-if="val('.selectCategory') ==            'Other'"/>`
-## Support for Operators##
+## Support for Operators ##
   * Logical Operators : Render-If supports logical AND and logical OR to be used in the render-if expression. With the help of this multiple conditions can be provided in a single render-if expression.
     * Example - 
       
@@ -45,9 +45,10 @@ This is a JS library for rendering the DOM elements on client side
     `/, *, %, ==, !=, >=, <=, >, <, +, -.` 
     * Example - 
       `<output form="rendererForm" name="DemoOutput" for="testNumberInput">Enter State : </output>
-	     <input id="testNumberInput" class="demoNumberInput" type="text" value="10">
+       <input id="testNumberInput" class="demoNumberInput" type="text" value="10">
        <input id="inputCheckbox" class="demoInputCheckbox" type="checkbox" render-if='val("#testNumberInput") %2 == 0'>`
-      The above checkbox will only render if the value entered in the input text is a divisible by 2.
+      
+       The above checkbox will only render if the value entered in the input text is a divisible by 2.
 
 ## Important Points ##
   * Pass clearOnHide parameter as true to RenderIf function in order to clear the input values after hiding. The input text/text area will     be set to empty string , checkbox value will be set to false, picklist value will be set to empty string on hiding. 
