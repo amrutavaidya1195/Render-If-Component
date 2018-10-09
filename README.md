@@ -7,7 +7,10 @@ This is a JS library for rendering the DOM elements on client side
   `clearOnHide: false  //Clear the data from the elements on hide`
 ## Using Renderif with different components ##
 * Input Text/ Textarea : To use render-if with simple input types just provide the selector inside val function and provide the expression in the render-if attribute.
-  * Example - render-if='val("#testNumberInput") == “test value” '
+  * Example - 
+  `<input id="testInput" class="demoNumberInput" type="text" value="">
+  <input id="inputCheckbox" type="checkbox" render-if='val("#testInput") == "test value"' onchange="testChangeFunction();">`
+  The above checkbox will only render if the value in the input text is 'test value'
 * Checkbox : To use render-if with checkbox just provide the selector inside val function and provide true/false value for comparison.
   * Example -  render-if='val("#inputCheckbox") == false'
 * Radio Button : To use render-if with radio button just provide the selector (which should be class in case of radio button) inside val function and provide the value you want to compare in the render-if expression. The render-if attribute will only work for those radio buttons which belongs to same class group. Provide same class name to all those radio buttons which should be grouped together.
