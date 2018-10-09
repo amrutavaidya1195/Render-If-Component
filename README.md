@@ -18,6 +18,12 @@ $("[visibly]").RenderIf();
   * Example - 
     * a) visibly='inVal("#multiSelectInput","other") == true' // For single  value comparison
     * b) visibly='val("#multiSelectInput") == "singing;other"' // For multiple value comparison
+## Render If with Apex Elements ##
+  * Only class selector has to be used while using visibly attribute with apex elements. 
+  * Visibly attribute can only be used with only those apex elements which supports HTML Pass-through attributes.
+  * Code snippet for using visibly with an apex input text : 
+      `<apex:inputText id="inputDetails" styleClass="inputStyle" value="{!strInputDetails}" html-visibly="val('.selectCategory') ==        'Other'"/>`
+
 ## Important Points ##
   * Pass clearOnHide parameter as true to RenderIf function in order to clear the input values after hiding. The input text/text area will     be set to empty string , checkbox value will be set to false, picklist value will be set to empty string on hiding. 
   * Single and double quotes in the visibly expression are interchangeable.
