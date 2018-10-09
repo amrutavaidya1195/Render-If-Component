@@ -13,6 +13,7 @@ This is a JS library for rendering the DOM elements on client side
   
   `<input id="testInput" class="demoNumberInput" type="text" value="">
   <input id="inputCheckbox" type="checkbox" render-if='val("#testInput") == "test value"' onchange="testChangeFunction();">`
+  
   The above checkbox will only render if the value in the input text is 'test value'
 * Checkbox : To use render-if with checkbox just provide the selector inside val function and provide true/false value for comparison.
   * Example -  render-if='val("#inputCheckbox") == false'
