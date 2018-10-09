@@ -7,8 +7,7 @@ This is a JS library for rendering the DOM elements on client side
   //Clear the data from the elements on hide
   
 	`$("[render-if]").RenderIf({ 
-				clearOnHide: false, 
-  });` 
+				clearOnHide: false, });` 
 ## Using Renderif with different components ##
 * Input Text/ Textarea : To use render-if with simple input types just provide the selector inside val function and provide the expression in the render-if attribute.
   * Example - 
