@@ -4,7 +4,7 @@ This is a JS library for rendering the DOM elements on client side
 ### Setup ###
 `$("[render-if]").RenderIf();`
 ### Options ###
-  //Clear the data from the elements on hide
+ClearOnHide parameter will clear the data from the elements on hiding. If this parameter is not passed its default value will be false.
   
 	$("[render-if]").RenderIf({clearOnHide: false}); 
 ## Using Renderif with different components ##
