@@ -26,6 +26,8 @@ This is a JS library for rendering the DOM elements on client side
     * a) render-if='inVal("#multiSelectInput","other") == true' // For single  value comparison
     * b) render-if='val("#multiSelectInput") == "singing;other"' // For multiple value comparison
 ## Render If with Visualforce Elements(Salesforce) ##
+  * Upload the renderif JS library in static resource and provide the path for the js file.
+    * Example - `<script src="{!URLFOR($Resource.RenderIfFile,'RenderIfFile/js/RenderIf.js')}"></script>`
   * Only class selector has to be used while using render-if attribute with apex elements. 
   * Render-if attribute can only be used with only those apex elements which supports HTML Pass-through attributes.
   * Code snippet for using render-if with an apex input text - 
