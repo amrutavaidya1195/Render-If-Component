@@ -41,7 +41,7 @@ This is a JS library for rendering the DOM elements on client side
     <input id="demoInputText8" style="background-color:#eaeae1;" class="demoInput1" type="text" value="Test value 1" >    
     <output form="rendererForm" name="DemoOutput" for="demoInputText9">Enter the value : </output>      
     <input id="demoInputText9" style="background-color:#eaeae1;" class="demoInput1" type="text" value="Test value 2" >    
-    <output id="demoLogical" form="rendererForm" name="DemoOutput" render-if='val("#demoInputText8") == "test value 1" and  	  	      val("#demoInputText9") == "test value 2"'>Rendered if both rendering conditions satisfies</output>
+    <output id="demoLogical" form="rendererForm" name="DemoOutput" render-if='val("#demoInputText8") == "test value 1" and val("#demoInputText9") == "test value 2"'>Rendered if both rendering conditions satisfies</output>
     ```
       	
   The above output text will render only if both conditions are satisfied
