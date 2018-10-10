@@ -61,6 +61,6 @@ ClearOnHide parameter will clear the data from the elements on hiding. If this p
   * Pass clearOnHide parameter as true to RenderIf function in order to clear the input values after hiding. The input text/text area will     be set to empty string , checkbox value will be set to false, picklist value will be set to empty string on hiding. 
   * Single and double quotes in the render-if expression are interchangeable.
 ## Known Issues ##
-  * Lower case string has to be used every time while comparing string values
+  * Lowercase string has to be used every time while comparing string values
   * For radio buttons the expression should contain the class selector else the component won’t work
   * There is no effect on radio button after setting the clearOnHide parameter as true.
