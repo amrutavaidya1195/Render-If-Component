@@ -33,6 +33,7 @@ ClearOnHide parameter will clear the data from the elements on hiding. If this p
   * Code snippet for using render-if with an apex input text - 
    
     `<apex:inputText id="inputDetails" styleClass="inputStyle" value="{!strInputDetails}" html-render-if="val('.selectCategory') ==            'Other'"/>`
+  * Rerender attribute cannot be used with the controlling element for which dependent elements have render-if attribute. That means for any controlling element which has been included in the render-if expression as a selector; reRender cannot be applied. If reRender is used with such element than any event fired on that element will not have any effect on the dependent elements.
 ## Support for Operators ##
   * Logical Operators : Render-If supports logical AND and logical OR to be used in the render-if expression. With the help of this multiple conditions can be provided in a single render-if expression.
     * Example - 
@@ -58,7 +59,7 @@ ClearOnHide parameter will clear the data from the elements on hiding. If this p
      The above checkbox will only render if the value entered in the input text is a divisible by 2.
 
 ## Important Points ##
-  * Pass clearOnHide parameter as true to RenderIf function in order to clear the input values after hiding. The input text/text area will     be set to empty string , checkbox value will be set to false, picklist value will be set to empty string on hiding. 
+  * Pass clearOnHide parameter as true to RenderIf function in order to clear the input values after hiding. The input text/text area will be set to empty string , checkbox value will be set to false, picklist value will be set to empty string on hiding. 
   * Single and double quotes in the render-if expression are interchangeable.
 ## Known Issues ##
   * Lowercase string has to be used every time while comparing string values
